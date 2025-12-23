@@ -1,0 +1,82 @@
+:root{
+  --bg: #0f1724;
+  --card: rgba(255,255,255,0.03);
+  --text: #dbeafe;
+  --muted: #93c5fd;
+  --accent: #7c3aed;
+  --glass: rgba(255,255,255,0.04);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
+              linear-gradient(180deg, #020617 0%, var(--bg) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:48px 20px;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+.navLinks a{ color:var(--muted); text-decoration:none; margin-left:18px; font-weight:600; }
+.logo{
+  font-weight:800;
+  font-size:20px;
+  letter-spacing:0.3px;
+}
+.logo .accent{ color:var(--accent) }
+
+.cta{ padding:8px 12px; background:linear-gradient(90deg,var(--accent),#4f46e5); border-radius:8px; color:white; }
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+
+.heroContent{ padding:48px 0; text-align:left; }
+.heroContent h1{
+  font-size:44px;
+  margin:0 0 12px 0;
+  line-height:1.02;
+  color: #f8fafc;
+}
+.lead{ color: #bcd9ff; margin:0 0 22px 0; max-width:60ch; }
+
+.actions .btn{ display:inline-block; text-decoration:none; padding:12px 18px; border-radius:10px; font-weight:700; margin-right:12px; }
+.btn{ display:inline-block; text-decoration:none; padding:12px 18px; border-radius:10px; font-weight:700; margin-right:12px; }
+.btn.primary{ background:linear-gradient(90deg,var(--accent),#4f46e5); color:white; box-shadow:0 6px 18px rgba(79,70,229,0.18); }
+.btn.ghost{ background:transparent; color:var(--muted); border:1px solid var(--glass); }
+
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:38px; }
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.card h3{ margin:0 0 8px 0; color:#eef2ff; }
+.card p{ margin:0; color:#bcd9ff; font-size:14px; }
+
+.footer{ margin-top:56px; color:#9fbef8; opacity:0.9; }
+.footer .small a{ color:var(--muted); text-decoration:none; margin:0 8px; }
+
+@media (max-width:640px){
+  .heroContent h1{ font-size:32px; }
+  .navLinks{ display:none; }
+  .container{ padding:28px 16px; }
+}
